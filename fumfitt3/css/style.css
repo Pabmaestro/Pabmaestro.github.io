@@ -1,0 +1,237 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: Montserrat,sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo blanco */
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #4caf50; /* Verde oscuro con transparencia */
+    color: #fff; /* Texto blanco */
+    box-shadow: inset -2px -11px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: padding 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    position: relative;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+   
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón sobre el logo */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ddd; /* Cambiado el color al pasar el ratón para mejor contraste */
+}
+
+.cta {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgba(0, 128, 0, 0.7); /* Verde con transparencia */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 128, 0, 0.9); /* Verde más oscuro al pasar el ratón */
+}
+
+.section {
+    padding: 80px 0;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-bottom: 1px solid #ddd;
+}
+
+#hero {
+    /* background-color: rgba(0, 128, 0, 0.9);  */
+    background: url(../assets/cancha\ dia.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-items: center;
+}
+
+#about {
+    background: url(../assets/Background-pecheras.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0px 0px 100px black);
+    display: flex;
+    flex-direction: row; /* Cambiar el orden en dispositivos pequeños */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#services{
+    background: url(../assets/Background-pelota.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.about-content {
+    width: 100%; /* Ocupar todo el ancho en dispositivos pequeños */
+    text-align: center; /* Alinear el texto al centro en dispositivos pequeños */
+}
+
+.about-content h2 {
+    color: rgba(0, 128, 0, 0.9); /* Verde oscuro con transparencia */
+}
+
+.about-image {
+    width: 100%; /* Ocupar todo el ancho en dispositivos pequeños */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.services-content h2 {
+    color: rgba(0, 128, 0, 0.9); /* Verde oscuro con transparencia */
+}
+
+footer {
+    background-color: #4caf50; /* Verde oscuro con transparencia */
+    color: #fff;
+    padding: 20px 0;
+    font-size: 16px;
+    box-shadow: inset 0px 11px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Media queries para dispositivos pequeños (Celulares y Tablets) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajustar el tamaño de fuente para dispositivos pequeños */
+    }
+
+    header {
+        padding: 20px 0; /* Ajustar el espaciado en el encabezado para dispositivos pequeños */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center; /* Centrar el texto del logo */
+    }
+
+    .logo img {
+        margin-bottom: 10px; /* Espaciado inferior para el logo en dispositivos pequeños */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 20px; /* Espaciado superior para los botones en dispositivos pequeños */
+    }
+
+    .section {
+        padding: 40px 0; /* Ajustar el espaciado en las secciones para dispositivos pequeños */
+    }
+
+    #hero {
+        padding: 60px 0; /* Ajustar el espaciado en el héroe para dispositivos pequeños */
+    }
+
+    #about,
+    #services {
+        padding: 40px 0; /* Ajustar el espaciado en secciones específicas para dispositivos pequeños */
+    }
+
+    .about-content,
+    .about-image,
+    .services-content {
+        text-align: center; /* Alinear al centro en dispositivos pequeños */
+    }
+
+    .about-image img {
+        margin-top: 20px;
+    }
+
+    footer {
+        padding: 20px 0; /* Ajustar el espaciado en el pie de página para dispositivos pequeños */
+    }
+}
